@@ -1,0 +1,120 @@
+/* Reset básico e definição do fundo da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #d1b47b; /* Cor de fundo mostarda/ocre da imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container do Card Centralizado */
+.card-container {
+    background-color: #e6e6e6; /* Fundo cinza claro do card */
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 25px;
+    border-radius: 28px; /* Cantos bem arredondados como na foto */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+/* Subtítulo informativo */
+.subtitle {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+/* Label acima dos campos de código */
+.input-label {
+    font-size: 11px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+
+/* Alinhamento dos blocos de input */
+.code-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+/* Estilização de cada quadrado de dígito */
+.code-inputs input {
+    width: 45px;
+    height: 45px;
+    background-color: #cccccc; /* Cinza do input desativado */
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    outline: none;
+}
+
+/* Pequeno efeito ao focar no input */
+.code-inputs input:focus {
+    background-color: #b3b3b3;
+}
+
+/* Botão Verificar */
+.btn-verificar {
+    width: 100%;
+    background-color: #1a1a1a; /* Cor quase preta do botão */
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 13px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-verificar:hover {
+    background-color: #333333;
+}
+
+/* Links do rodapé do card */
+.links-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.links-footer a {
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.link-reenviar {
+    color: #333333;
+}
+
+.link-alterar {
+    color: #666666;
+    font-size: 10px !important;
+}
