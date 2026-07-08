@@ -4,23 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filtro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Filtro - Costa/Css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <header class="header">
 
-        <div class="logo">
-            <h2>COSTA CONFECÇÕES</h2>
+        <div class="logo-1">
+            <div class="logo-costa">
+                <img src="../Filtro - Costa/Css/Logo - Costa Confeccoes.jpeg" alt="Logo Costa Confecções">
+            </div>
         </div>
 
-        <div class="pesquisa">
-            <input type="text" placeholder="O que você procura?">
+        <div class="header-centro">
+            <input type="text">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </div>
 
-        <nav class="menu">
-            <a href="#">Favoritos</a>
-            <a href="#">Login</a>
-        </nav>
+        <div class="header-direita">
+
+            <button class="caixa-menor">
+                <i class="fa-solid fa-heart"></i>
+                <span>Lista de Desejos</span>
+            </button>
+
+            <button class="caixa-menor">
+                <i class="fa-regular fa-circle-user"></i>
+                <span>Login</span>
+            </button>
+
+        </div>
     </header>
     <main class="container">
        
@@ -137,6 +152,8 @@
                     Produtos para todas as ocasiões.
                 </p>
 
+                <h4>Ordernar por:</h4>
+
                 <select>
                     <option>Mais populares</option>
                     <option>Menor preço</option>
@@ -147,34 +164,83 @@
 
        <div class="grid-produtos">
         <div class="card">
-            <img src="../Filtro - Costa (Real)/Boné cinza.jpg" alt="calcinha rosa">
+            <img src="../Filtro - Costa/Css/Boné cinza.jpg" alt="boné cinza">
             <h3>Boné cinza</h3>
             <p class="preço">16,99</p>
         </div>
 
         <div class="card">
-            <img src="" alt="meia performance preta">
-            <h3>Meia performance preta</h3>
-            <p class="preço">18,99</p>
+            <img src="../Filtro - Costa/Css/Camisa Branca.jpg" alt="camisa branca">
+            <h3>Camisa branca</h3>
+            <p class="preço">99,99</p>
         </div>
 
         <div class="card">
-            <img src="" alt="bermuda masculino">
-            <h3>Bermuda masculina</h3>
+            <img src="" alt="Camisa polo preta">
+            <h3>Camisa polo preta</h3>
             <p class="preço">122,49</p>
         </div>
 
         <div class="card">
-            <img src="" alt="cueca box azul">
-            <h3>Cueca box azul</h3>
-            <p class="preço">7,99</p>
+            <img src="" alt="calça jeans">
+            <h3>Calça Jeans</h3>
+            <p class="preço">179,99</p>
         </div>
        </div>   
         </section>
        <!--A área acima são dos produtos-->
     </main>
     <footer class="footer">
-        <p>© 2026 Costa Confecções - Todos os direitos reservados</p>
+        <div class="footer-coluna logo-footer">
+
+            <p>Contato</p>
+
+            <div class="redes-sociais">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna">
+            <p>Sobre</p>
+            <i class="fa-regular fa-circle-question footer-icon"></i>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna">
+            <p>Suporte</p>
+            <i class="fa-solid fa-headset footer-icon"></i>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna2">
+            <p>Sustentabilidade</p>
+            <p>Mapa do site</p>
+            <p>Clique e retire</p>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna2">
+            <p>Política de privacidade</p>
+            <p>Termos e condições</p>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna">
+            <img src="https://cdn.prod.website-files.com/686fd3c4baa0f126615c68cc/68756d11ab44b920e1451861_logo-aplica%C3%A7%C3%A3o-site.svg" alt="Site Blindado">
+        </div>
+
     </footer>
+
+    <div class="direitos">
+        © Class 238 - Todos os direitos reservados
+    </div>
 </body>
 </html>
