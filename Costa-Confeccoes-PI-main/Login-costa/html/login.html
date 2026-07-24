@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalho PI - Fazer Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <div class="login-card">
+      <h1>Fazer Login</h1>
+
+      <p class="subtitle">Fazer login ou criar conta</p>
+
+      <div class="social-login-container">
+        <button class="social-btn" id="googlebutton"><i class="fab fa-google"></i> Google</button>
+        <button class="social-btn" id="facebookbutton">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </button>
+      </div>
+
+      <div class="divider-container">
+        <div class="divider-line"></div>
+        <div class="divider-line"></div>
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label>Como deseja receber o código?</label>
+          <div class="select-wrapper">
+            <select id="methodSelect" class="input-field">
+              <option value="whatsapp">WhatsApp</option>
+              <option value="email">E-mail</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group" id="phoneGroup">
+          <label>Telefone</label>
+          <input type="tel" class="input-field" id="telefoneInput" placeholder="(99) 99999-9999" />
+        </div>
+
+        <div class="form-group hidden" id="emailGroup">
+          <label>E-mail</label>
+          <input type="email" class="input-field" placeholder="seu@email.com" />
+        </div>
+
+        <button type="submit" class="btn-submit" id="btn_continuar">CONTINUAR</button>
+      </form>
+    </div>
+
+    <script src="../js/login.js"></script>
+  </body>
+</html>
