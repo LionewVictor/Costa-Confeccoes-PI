@@ -1,129 +1,130 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-  --preto-cabecalho: #1f1f1f;
-  --amarelo-costa-escurecido: #c4a36d;
-  --preto: #000000;
-  --branco: #ffffff;
-  --branco-gelo: #e9e8e8;
-  --amarelo-costa: #d2ae73;
-  --cinza: #b6ada2;
-  --bege-caracteristicas: #ead5b2;
+:root{
+    --preto-cabecalho: #1F1F1F;
+    --amarelo-costa-escurecido: #C4A36D;
+    --preto: #000000;
+    --branco: #FFFFFF;
+    --branco-gelo: #E9E8E8;
+    --amarelo-costa: #D2AE73;
+    --cinza: #b6ada2;
+    --bege-caracteristicas: #EAD5B2;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-  background: var(--amarelo-costa);
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
+body{
+    background:var(--amarelo-costa);
+     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
-/*header*/
-header {
+/* HEADER */
+header{
   height: 65px;
   border-bottom: 2px solid var(--preto-cabecalho);
-  display: flex;
-  align-items: center;
+  display:flex;
+  align-items:center;
   background: #c4a36d86;
   flex-direction: column 1px;
   justify-content: space-between;
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(20px);
   position: sticky;
   top: 00;
   z-index: 10;
 }
 
-.logo-1 {
-  width: 200px;
-  height: 100%;
+.logo-1{
+  width:200px;
+  height:100%;
   background: var(--preto-cabecalho);
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 35px;
-  flex-shrink: 0;
+  position:relative;
+  display:flex;
+  align-items:center;
+  padding-left:35px;
+  flex-shrink:0;
 }
 
-.logo-costa img {
+.logo-costa img{
   width: 130px;
   height: 65px;
 }
 
-.header-centro {
+.header-centro{
   width: 1500px;
   height: 38px;
   margin-left: 410px;
   margin-right: 400px;
   background: var(--branco-gelo);
-  border-radius: 20px;
+  border-radius: 20px; 
   display: flex;
   overflow: hidden;
   align-items: center;
   justify-content: center;
 }
 
-.header-centro input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  outline: none;
-  padding: 0 20px;
+.header-centro input{
+  flex:1;
+  border:none;
+  background:transparent;
+  outline:none;
+  padding:0 20px;
   align-items: center;
 }
 
-.header-centro button {
-  width: 60px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 22px;
+.header-centro button{
+  width:60px;
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  font-size:22px;
 }
 
-.header-centro button:hover {
-  color: #000000;
+.header-centro button:hover{
+  color:#000000;
   transform: scale(1.05);
 }
 
-.header-direita {
-  display: flex;
-  gap: 18px;
-  margin-left: auto;
-  margin-right: 50px;
+.header-direita{
+  display:flex;
+  gap:18px;
+  margin-left:auto;
+  margin-right:50px;
 }
 
-.caixa-menor {
-  background: var(--cinza);
-  border: none;
-  border-radius: 15px;
+.caixa-menor{
+  background:var(--cinza);
+  border:none;
+  border-radius:15px;
   padding: 5px 15px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  font-size: 15px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  font-size:15px;
 }
 
-.caixa-menor:hover {
-  background: var(--cinza);
+.caixa-menor:hover{
+  background:var(--cinza);
   transform: scale(1.05);
 }
 
-.caixa-menor span {
+.caixa-menor span{
   font-weight: 800px;
   font-size: 15px;
 }
 
-.caixa-menor i {
+.caixa-menor i{
   font-size: 20px;
 }
-
 /*final do header*/
 
 .container {
@@ -267,12 +268,12 @@ footer {
   font-size: 12px;
 }
 
-/* RODA-PÉ */
+/* RODA PÉ */
 
-.footer {
+footer {
   margin-top: 120px;
-  height: 150px;
-  background: #262626;
+  height: 250px;
+  background: var(--preto-cabecalho);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -346,7 +347,7 @@ footer {
 }
 
 .direitos {
-  background: #262626;
+  background: var(--preto-cabecalho);
   color: #fff;
   text-align: center;
   font-size: 16px;
