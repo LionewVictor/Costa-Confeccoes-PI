@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro</title>
+    <link rel="stylesheet" href="../Filtro - Costa/Css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+
+        <div class="logo-1">
+            <div class="logo-costa">
+                <img src="../Filtro - Costa/Css/Logo - Costa Confeccoes.jpeg" alt="Logo Costa Confecções">
+            </div>
+        </div>
+
+        <div class="header-centro">
+            <input type="text">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="header-direita">
+
+            <button class="caixa-menor" onclick="window.location.href='../Favoritos/favoritos.html'">
+                <i class="fa-solid fa-heart"></i>
+                <span>Lista de Desejos</span>
+            </button>
+
+            <button class="caixa-menor" onclick="window.location.href='../Login-costa/html/login.html'">
+                <i class="fa-regular fa-circle-user"></i>
+                <span>Login</span>
+            </button>
+
+        </div>
+    </header>
+    <main class="container">
+       
+        <!--A área abaixo é do filtro-->
+        <aside class="sidebar">
+
+            <h2>Filtros</h2>
+
+            <details class="dropdown-filtro">
+                <summary>Marca</summary>
+
+                <label><input type="checkbox">Altomax</label>
+                <label><input type="checkbox">Rikam</label>
+                <label><input type="checkbox">Joggofi</label>
+                <label><input type="checkbox">Zee rucci</label>
+                <label><input type="checkbox">Zigurat</label>
+                <label><input type="checkbox">Distinto</label>
+                <label><input type="checkbox">Lacoste</label>
+                <label><input type="checkbox">Ogochi</label>
+                <label><input type="checkbox">Kadffor</label>
+                <label><input type="checkbox">Bella sedução</label>
+            </details> 
+
+               <details class="dropdown-filtro">
+                <summary>Tamanho</summary>
+
+                <label><input type="checkbox">PP</label>
+                <label><input type="checkbox">P</label>
+                <label><input type="checkbox">M</label>
+                <label><input type="checkbox">G</label>
+                <label><input type="checkbox">GG</label>
+                <label><input type="checkbox">Tamanho Único</label>
+            </details> 
+
+              <details class="dropdown-filtro">
+                <summary>Gênero</summary>
+
+                <label><input type="checkbox">Masculino</label>
+                <label><input type="checkbox">Feminino</label>
+                <label><input type="checkbox">Unissex</label>
+            </details> 
+
+              <details class="dropdown-filtro" >
+                <summary>Produto</summary>
+
+                <label><input type="checkbox">Calcinha</label>
+                <label><input type="checkbox">Cueca</label>
+                <label><input type="checkbox">Sutiãs</label>
+                <label><input type="checkbox">Cinto</label>
+                <label><input type="checkbox">Bolsinhas</label>
+                <label><input type="checkbox">Bodys</label>
+                <label><input type="checkbox">Saias</label>
+                <label><input type="checkbox">Camisetas</label>
+                <label><input type="checkbox">Meias</label>
+                <label><input type="checkbox">Bonés</label>
+                <label><input type="checkbox">Bermudas</label>
+                <label><input type="checkbox">Casacos</label>
+            </details> 
+
+            <details class="dropdown-filtro" >
+                <summary>Cor</summary>
+
+                <label><input type="checkbox">Azul</label>
+                <label><input type="checkbox">Amarelo</label>
+                <label><input type="checkbox">Bege/Marrom</label>
+                <label><input type="checkbox">Cinto</label>
+                <label><input type="checkbox">Branco</label>
+                <label><input type="checkbox">Preto</label>
+                <label><input type="checkbox">Cinza</label>
+                <label><input type="checkbox">Vermelho</label>
+                <label><input type="checkbox">Rosa</label>
+            </details> 
+
+            <details class="dropdown-filtro" >
+                <summary>Material</summary>
+
+                <label><input type="checkbox">Algodão</label>
+                <label><input type="checkbox">Linho</label>
+                <label><input type="checkbox">Seda</label>
+                <label><input type="checkbox">Poliéster</label>
+                <label><input type="checkbox">Vicose</label>
+            </details> 
+
+            <details class="dropdown-filtro" >
+                <summary>Modelagem</summary>
+
+                <label><input type="checkbox">Slim/Skinny</label>
+                <label><input type="checkbox">Classic</label>
+                <label><input type="checkbox">Oversized/Confort</label>
+                <label><input type="checkbox">Plus size</label>
+                <label><input type="checkbox">Acinturada</label>
+            </details> 
+
+            <details class="dropdown-filtro" >
+                <summary>Faixa de preço</summary>
+
+                <label><input type="checkbox">Até R$50</label>
+                <label><input type="checkbox">R$50 - R$100</label>
+                <label><input type="checkbox">R$100 - R$200</label>
+                <label><input type="checkbox">Acima de R$200</label>
+            </details> 
+        </aside>
+
+        <!--A área acima é do filtro-->
+
+        <!--A área abaixo são dos produtos-->
+        <section class="conteudo">
+
+            <div class="topo-categoria">
+                <h1>MODA MASCULINA</h1>
+
+                <p>
+                   Experimente a sua melhor versão na Costa Confecções.
+                    Produtos para todas as ocasiões.
+                </p>
+
+                <h4>Ordernar por:</h4>
+
+                <select>
+                    <option>Mais populares</option>
+                    <option>Menor preço</option>
+                    <option>Maior preço</option>
+                </select>
+
+            </div>
+
+       <div class="grid-produtos">
+        <div class="card">
+            <img src="../Filtro - Costa/Css/Boné cinza.jpg" alt="boné cinza">
+            <h3>Boné cinza</h3>
+            <p class="preço">16,99</p>
+        </div>
+
+        <div class="card">
+            <img src="../Filtro - Costa/Css/Camisa Branca.jpg" alt="camisa branca">
+            <h3>Camisa branca</h3>
+            <p class="preço">99,99</p>
+        </div>
+
+        <div class="card">
+            <img src="" alt="Camisa polo preta">
+            <h3>Camisa polo preta</h3>
+            <p class="preço">122,49</p>
+        </div>
+
+        <div class="card">
+            <img src="" alt="calça jeans">
+            <h3>Calça Jeans</h3>
+            <p class="preço">179,99</p>
+        </div>
+       </div>   
+        </section>
+       <!--A área acima são dos produtos-->
+    </main>
+    <footer class="footer">
+        <div class="footer-coluna logo-footer">
+
+            <p>Contato</p>
+
+            <div class="redes-sociais">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna">
+            <p>Sobre</p>
+            <i class="fa-regular fa-circle-question footer-icon"></i>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna">
+            <p>Suporte</p>
+            <i class="fa-solid fa-headset footer-icon"></i>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna2">
+            <p>Sustentabilidade</p>
+            <p>Mapa do site</p>
+            <p>Clique e retire</p>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna2">
+            <p>Política de privacidade</p>
+            <p>Termos e condições</p>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna">
+            <img src="https://cdn.prod.website-files.com/686fd3c4baa0f126615c68cc/68756d11ab44b920e1451861_logo-aplica%C3%A7%C3%A3o-site.svg" alt="Site Blindado">
+        </div>
+
+    </footer>
+
+    <div class="direitos">
+        © Class 238 - Todos os direitos reservados
+    </div>
+</body>
+</html>
