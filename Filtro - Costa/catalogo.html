@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costa Confecções</title>
+    <link rel="stylesheet" href="CSS/catalogo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+
+        <div class="logo-1">
+            <div class="logo-costa" id="logo-home">
+                <img src="CSS/Logo - Costa Confeccoes.jpeg" alt="Logo Costa Confecções">
+            </div>
+        </div>
+
+        <div class="header-centro">
+            <input id="campo-pesquisa" type="text" placeholder="Pesquisar produtos...">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="header-direita">
+
+            <button class="caixa-menor">
+                <i class="fa-solid fa-heart"></i>
+                <span>Lista de Desejos</span>
+            </button>
+
+            <button class="caixa-menor">
+                <i class="fa-regular fa-circle-user"></i>
+                <span>Login</span>
+            </button>
+
+        </div>
+    </header>
+    <main class="container">
+
+        <!--A área abaixo é do filtro-->
+        <aside class="sidebar" id="sidebar-filtros">
+
+            <h2>Filtros</h2>
+
+            <button id="limpar-filtros">
+                Limpar filtros
+            </button>
+
+            <details class="dropdown-filtro">
+                <summary>Marca</summary>
+
+                <label><input type="checkbox" name="marca" value="Altomax">Altomax</label>
+                <label><input type="checkbox" name="marca" value="Rikam">Rikam</label>
+                <label><input type="checkbox" name="marca" value="Joggofi">Joggofi</label>
+                <label><input type="checkbox" name="marca" value="Zee rucci">Zee rucci</label>
+                <label><input type="checkbox" name="marca" value="Zigurat">Zigurat</label>
+                <label><input type="checkbox" name="marca" value="Distinto">Distinto</label>
+                <label><input type="checkbox" name="marca" value="Lacoste">Lacoste</label>
+                <label><input type="checkbox" name="marca" value="Ogochi">Ogochi</label>
+                <label><input type="checkbox" name="marca" value="Kadffor">Kadffor</label>
+                <label><input type="checkbox" name="marca" value="Bella seducao">Bella sedução</label>
+            </details>
+
+            <details class="dropdown-filtro">
+                <summary>Tamanho</summary>
+
+                <label><input type="checkbox" name="tamanho" value="PP">PP</label>
+                <label><input type="checkbox" name="tamanho" value="P">P</label>
+                <label><input type="checkbox" name="tamanho" value="M">M</label>
+                <label><input type="checkbox" name="tamanho" value="G">G</label>
+                <label><input type="checkbox" name="tamanho" value="GG">GG</label>
+                <label><input type="checkbox" name="tamanho" value="tamnho unico">Tamanho Único</label>
+            </details>
+
+            <details class="dropdown-filtro">
+                <summary>Gênero</summary>
+
+                <label><input type="checkbox" name="genero" value="Masculino">Masculino</label>
+                <label><input type="checkbox" name="genero" value="Feminino">Feminino</label>
+                <label><input type="checkbox" name="genero" value="Unissex">Unissex</label>
+            </details>
+
+            <details class="dropdown-filtro">
+                <summary>Produto</summary>
+
+                <label><input type="checkbox" name="produto" value="Calcinha">Calcinha</label>
+                <label><input type="checkbox" name="produto" value="Cueca">Cueca</label>
+                <label><input type="checkbox" name="produto" value="Sutiãs">Sutiãs</label>
+                <label><input type="checkbox" name="produto" value="Cinto">Cinto</label>
+                <label><input type="checkbox" name="produto" value="Bolsinhas">Bolsinhas</label>
+                <label><input type="checkbox" name="produto" value="Bodys">Bodys</label>
+                <label><input type="checkbox" name="produto" value="Saias">Saias</label>
+                <label><input type="checkbox" name="produto" value="Camisetas">Camisetas</label>
+                <label><input type="checkbox" name="produto" value="Meias">Meias</label>
+                <label><input type="checkbox" name="produto" value="Bonés">Bonés</label>
+                <label><input type="checkbox" name="produto" value="Bermudas">Bermudas</label>
+                <label><input type="checkbox" name="produto" value="Casacos">Casacos</label>
+            </details>
+
+            <details class="dropdown-filtro">
+                <summary>Cor</summary>
+
+                <label><input type="checkbox" name="cor" value="Azul">Azul</label>
+                <label><input type="checkbox" name="cor" value="Amarelo">Amarelo</label>
+                <label><input type="checkbox" name="cor" value="Bege/Marrom">Bege/Marrom</label>
+                <label><input type="checkbox" name="cor" value="Verde">Verde</label>
+                <label><input type="checkbox" name="cor" value="Branco">Branco</label>
+                <label><input type="checkbox" name="cor" value="Preto">Preto</label>
+                <label><input type="checkbox" name="cor" value="Cinza">Cinza</label>
+                <label><input type="checkbox" name="cor" value="Vermelho">Vermelho</label>
+                <label><input type="checkbox" name="cor" value="Rosa">Rosa</label>
+            </details>
+
+            <details class="dropdown-filtro">
+                <summary>Material</summary>
+
+                <label><input type="checkbox" name="material" value="Algodão">Algodão</label>
+                <label><input type="checkbox" name="material" value="Linho">Linho</label>
+                <label><input type="checkbox" name="material" value="Seda">Seda</label>
+                <label><input type="checkbox" name="material" value="Poliéster">Poliéster</label>
+                <label><input type="checkbox" name="material" value="Vicose">Vicose</label>
+            </details>
+
+            <details class="dropdown-filtro">
+                <summary>Modelagem</summary>
+
+                <label><input type="checkbox" name="modelagem" value="Slim/Skinny">Slim/Skinny</label>
+                <label><input type="checkbox" name="modelagem" value="Classic">Classic</label>
+                <label><input type="checkbox" name="modelagem" value="Oversized/Confort">Oversized/Confort</label>
+                <label><input type="checkbox" name="modelagem" value="Plus size">Plus size</label>
+                <label><input type="checkbox" name="modelagem" value="Acinturada">Acinturada</label>
+            </details>
+
+            <details class="dropdown-filtro">
+                <summary>Faixa de preço</summary>
+
+                <label><input type="checkbox" name="preco" value="0-50">Até R$50</label>
+                <label><input type="checkbox" name="preco" value="50-100">R$50 - R$100</label>
+                <label><input type="checkbox" name="preco" value="100-200">R$100 - R$200</label>
+                <label><input type="checkbox" name="preco" value="200+">Acima de R$200</label>
+            </details>
+        </aside>
+
+        <!--A área acima é do filtro-->
+
+        <!--A área abaixo são dos produtos-->
+        <section class="conteudo" id="conteudo-catalogo">
+
+            <div class="topo-categoria" id="topo-categoria">
+                <h1 id="titulo-catalogo">MODA MASCULINA</h1>
+
+                <p id="descricao-catalogo">
+                    Experimente a sua melhor versão na Costa Confecções.
+                    Produtos para todas as ocasiões.
+                </p>
+
+                <h4>Ordenar por:</h4>
+
+                <select id="ordenacao">
+                    <option value="popularidade">Mais populares</option>
+                    <option value="menor-preco">Menor preço</option>
+                    <option value="maior-preco">Maior preço</option>
+                </select>
+            </div>
+
+            <p id="contador-produtos"></p>
+
+            <div class="grid-produtos" id="lista-produtos">
+
+                <!--Local dos cards serão criados pelo Javascript-->
+
+            </div>
+
+            <button id="mostrar-mais">
+                Mostrar mais produtos
+            </button>
+
+        </section>
+        <!--A área acima são dos produtos-->
+    </main>
+    <footer class="footer">
+        <div class="footer-coluna logo-footer">
+
+            <p>Contato</p>
+
+            <div class="redes-sociais">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna">
+            <p>Sobre</p>
+            <i class="fa-regular fa-circle-question footer-icon"></i>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna">
+            <p>Suporte</p>
+            <i class="fa-solid fa-headset footer-icon"></i>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna2">
+            <p>Sustentabilidade</p>
+            <p>Mapa do site</p>
+            <p>Clique e retire</p>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna2">
+            <p>Política de privacidade</p>
+            <p>Termos e condições</p>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="footer-coluna">
+            <img src="https://cdn.prod.website-files.com/686fd3c4baa0f126615c68cc/68756d11ab44b920e1451861_logo-aplica%C3%A7%C3%A3o-site.svg"
+                alt="Site Blindado">
+        </div>
+
+    </footer>
+
+    <div class="direitos">
+        © Class 238 - Todos os direitos reservados
+    </div>
+
+    <script src="js/catalogo.js"></script>
+
+</body>
+
+</html>
