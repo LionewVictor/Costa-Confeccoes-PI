@@ -34,7 +34,6 @@
                 <i class="fa-regular fa-circle-user"></i>
                 <span>Login</span>
             </button>
-
         </div>
 
     </header>
@@ -51,62 +50,22 @@
             </section>
 
             <section class="filters-section">
-                <label class="filter-item">
+                <label class="filter-item" id="checkboxMaiorPreco">
                     <input type="checkbox"> Maior Preço
                 </label>
-                <label class="filter-item">
+                <label class="filter-item" id="checkboxMenorPreco">
+                    <input type="checkbox"> Menor preço
+                </label>
+                <label class="filter-item" id="checkboxMaiorTamanho">
                     <input type="checkbox"> Maior Tamanho
                 </label>
-                <label class="filter-item">
-                    <input type="checkbox"> Maior Tamanho
-                </label>
-                <label class="filter-item">
+                <label class="filter-item" id="checkboxMenorTamanho">
                     <input type="checkbox"> Menor Tamanho
                 </label>
             </section>
 
-            <section class="products-list">
+            <section class="products-list" id="favoritos">
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-                <div class="product-card">
-                    <div class="product-img-container">
-                        <img src="https://via.placeholder.com/120x120?text=Calca" alt="Calça Jeans" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Calça Jeans Masculina Zigurat</h3>
-                        <p class="product-price">R$99,99</p>
-                    </div>
-                        <button class="delete-btn">
-                            Excluir <i class="fa-regular fa-trash-can"></i>
-                        </button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-img-container">
-                        <img src="https://via.placeholder.com/120x120?text=Camisa" alt="Camisa Masculina" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Camisa Masculina Ogochi</h3>
-                        <p class="product-price">R$64,99</p>
-                    </div>
-                    <button class="delete-btn">
-                        Excluir <i class="fa-regular fa-trash-can"></i>
-                    </button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-img-container">
-                        <img src="https://via.placeholder.com/120x120?text=Cinto" alt="Cinto de Couro" class="product-image">
-                    </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Cinto de Couro</h3>
-                            <p class="product-price">R$14,99</p>
-                        </div>
-                        <button class="delete-btn">
-                            Excluir <i class="fa-regular fa-trash-can"></i>
-                        </button>
-                </div>
-
-            </section>
         </main>
 <footer>
 
@@ -160,5 +119,6 @@
       <div class="direitos">
         © Class 238 - Todos os direitos
     </div>
+    <script src="favoritos.js"></script>
      </body>
 </html>
