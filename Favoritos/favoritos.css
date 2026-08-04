@@ -10,6 +10,11 @@
     --amarelo-costa: #D2AE73;
     --cinza: #b6ada2;
     --bege-caracteristicas: #EAD5B2;
+    --text-red: #d32f2f; /* Cor do botão excluir */
+    --bg-dark-gray: #3a3a3a; /* Cor do banner de anúncio */
+    --bg-card: #ceaa62; /* Tom ligeiramente mais escuro para os cards */
+    --text-light: #ffffff;
+    --text-dark: #000000; 
 }
 
 /* RESET */
