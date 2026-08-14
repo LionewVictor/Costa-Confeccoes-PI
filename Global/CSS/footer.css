@@ -1,0 +1,142 @@
+/* RODA PÉ */
+
+footer {
+    margin-top: 120px;
+    height: 250px;
+    background: var(--preto-cabecalho);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dfbf84;
+}
+
+.footer-coluna {
+    padding: 0 40px;
+    text-align: center;
+}
+
+.footer-coluna2 {
+    padding: 0 40px;
+    text-align: center;
+}
+
+.logo-footer h3 {
+    font-size: 34px;
+    font-style: italic;
+}
+
+.logo-footer span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-coluna p {
+    margin: 12px 30px;
+    font-size: 17px;
+}
+
+.footer-coluna2 p {
+    margin: 12px 30px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.footer-coluna2 p:hover {
+    color: #fce9c0;
+    transform: translateY(-1px);
+}
+
+.divisor {
+    width: 1px;
+    height: 110px;
+    background: #5c5c5c;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.redes-sociais i,
+.footer-icon {
+    color: #000;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.redes-sociais i:hover,
+.footer-icon:hover {
+    transform: translateY(-1px);
+}
+
+.footer-coluna img {
+    width: 300px;
+}
+
+.direitos {
+    background: var(--preto-cabecalho);
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 12px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 992px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .logo-1 {
+        width: 100%;
+    }
+
+    .logo-1::after {
+        display: none;
+    }
+
+    .header-centro {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .header-direita {
+        margin: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main h2 {
+        font-size: 30px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .pesquisa {
+        width: 90%;
+    }
+
+    .caixa-geral {
+        width: 90%;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    .divisor {
+        display: none;
+    }
+}

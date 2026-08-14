@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Produtos | Costa Confecções</title>
+
+    <link rel="stylesheet" href="CSS/produtos.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ========================= -->
+    <!-- MENU -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="../Global/CSS/Logo - Costa Confeccoes.jpeg" alt="Logo" />
+      </div>
+
+      <nav>
+        <ul>
+          <li id="menu-dashboard">
+            <i class="fa-solid fa-chart-line"></i>
+
+            Dashboard
+          </li>
+
+          <li class="ativo">
+            <i class="fa-solid fa-box"></i>
+
+            Produtos
+          </li>
+
+          <li id="menu-cadastrar">
+            <i class="fa-solid fa-square-plus"></i>
+
+            Cadastrar Produto
+          </li>
+
+          <li id="menu-ver-site">
+            <i class="fa-solid fa-globe"></i>
+
+            Ver Site
+          </li>
+
+          <li id="menu-sair">
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Sair
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ========================= -->
+    <!-- CONTEÚDO -->
+    <!-- ========================= -->
+
+    <main class="conteudo">
+      <header class="topo">
+        <div>
+          <h1>Produtos</h1>
+
+          <p>Gerencie todos os produtos cadastrados.</p>
+        </div>
+
+        <button id="novo-produto">Novo Produto</button>
+      </header>
+
+      <!-- Pesquisa -->
+
+      <section class="barra-pesquisa">
+        <input
+          type="text"
+          id="campo-pesquisa"
+          placeholder="Pesquisar produto..."
+        />
+      </section>
+
+      <!-- Tabela -->
+
+      <section class="tabela">
+        <table>
+          <thead>
+            <tr>
+              <th>Imagem</th>
+
+              <th>Nome</th>
+
+              <th>Categoria</th>
+
+              <th>Marca</th>
+
+              <th>Preço</th>
+
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody id="lista-produtos">
+            <!-- JS -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+    <script src="js/produtos.js"></script>
+  </body>
+</html>

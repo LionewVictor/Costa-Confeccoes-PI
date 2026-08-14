@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+:root {
+    --preto: #1F1F1F;
+    --dourado: #D2AE73;
+    --dourado-hover: #C4A36D;
+    --branco: #FFFFFF;
+    --cinza: #F4F4F4;
+    --cinza-borda: #E2E2E2;
+    --texto: #555;
+
+}
+
+/*========================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: var(--cinza);
+    display: flex;
+    min-height: 100vh;
+}
+
+/*========================*/
+/* SIDEBAR */
+/*========================*/
+
+.sidebar {
+    width: 260px;
+    background: var(--preto);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.logo {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.logo img {
+    width: 160px;
+}
+
+.sidebar nav {
+    margin-top: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: .25s;
+    font-weight: 600;
+}
+
+.sidebar li:hover {
+    background: var(--dourado);
+    color: black;
+}
+
+.sidebar li.ativo {
+    background: var(--dourado);
+    color: black;
+}
+
+/*========================*/
+/* CONTEÚDO */
+/*========================*/
+
+.conteudo {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 40px;
+}
+
+/*========================*/
+/* TOPO */
+/*========================*/
+
+.topo {
+    margin-bottom: 35px;
+}
+
+.topo h1 {
+    font-size: 34px;
+    color: var(--preto);
+}
+
+.topo p {
+    color: var(--texto);
+    margin-top: 8px;
+}
+
+/*========================*/
+/* CARDS */
+/*========================*/
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+}
+
+.card i {
+    font-size: 35px;
+    color: var(--dourado);
+}
+
+.card h2 {
+    font-size: 28px;
+    color: var(--preto);
+}
+
+.card span {
+    color: var(--texto);
+    font-size: 15px;
+}
+
+/*========================*/
+/* TABELA */
+/*========================*/
+
+.ultimos-produtos {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+}
+
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.titulo h2 {
+    color: var(--preto);
+}
+
+#novo-produto {
+    background: var(--dourado);
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .25s;
+}
+
+#novo-produto:hover {
+    background: var(--dourado-hover);
+    transform: translateY(-2px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: var(--cinza);
+}
+
+th {
+    padding: 18px;
+    text-align: left;
+}
+
+td {
+    padding: 18px;
+    border-top: 1px solid var(--cinza-borda);
+}
+
+tbody tr {
+    transition: .25s;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+
+/*========================*/
+/* RESPONSIVO */
+/*========================*/
+
+@media(max-width:1200px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:850px) {
+
+    .sidebar {
+        width: 90px;
+    }
+
+    .sidebar li {
+        justify-content: center;
+    }
+
+    .sidebar li {
+        font-size: 0;
+    }
+
+    .sidebar li i {
+        font-size: 22px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .conteudo {
+        margin-left: 90px;
+        width: calc(100% - 90px);
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:650px) {
+
+    .conteudo {
+        padding: 20px;
+    }
+
+    .titulo {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    table {
+        display: block;
+        overflow: auto;
+    }
+
+}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel Administrativo | Costa Confecções</title>
+    <link rel="stylesheet" href="CSS/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ========================= -->
+    <!-- MENU LATERAL -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+      <div class="logo">
+        <img
+          src="../Global/CSS/Logo - Costa Confeccoes.jpeg"
+          alt="Costa Confecções"
+        />
+      </div>
+
+      <nav>
+        <ul>
+          <li class="ativo" id="menu-dashboard">
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+          </li>
+
+          <li id="menu-produtos">
+            <i class="fa-solid fa-box"></i>
+            Produtos
+          </li>
+
+          <li id="menu-cadastrar">
+            <i class="fa-solid fa-square-plus"></i>
+            Cadastrar Produto
+          </li>
+
+          <li id="menu-ver-site">
+            <i class="fa-solid fa-globe"></i>
+
+            Ver Site
+          </li>
+
+          <li id="menu-sair">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Sair
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ========================= -->
+    <!-- CONTEÚDO -->
+    <!-- ========================= -->
+
+    <main class="conteudo">
+      <!-- TOPO -->
+
+      <header class="topo">
+        <div>
+          <h1>Dashboard</h1>
+          <p>Bem-vindo ao painel administrativo da Costa Confecções.</p>
+        </div>
+      </header>
+
+      <!-- ========================= -->
+      <!-- CARDS -->
+      <!-- ========================= -->
+
+      <section class="cards">
+        <article class="card">
+          <i class="fa-solid fa-box"></i>
+          <div>
+            <h2 id="total-produtos">0</h2>
+
+            <span> Produtos </span>
+          </div>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-layer-group"></i>
+          <div>
+            <h2 id="total-categorias">0</h2>
+
+            <span> Categorias </span>
+          </div>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-tags"></i>
+          <div>
+            <h2 id="total-marcas">0</h2>
+
+            <span> Marcas </span>
+          </div>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <div>
+            <h2 id="valor-medio">R$ 0,00</h2>
+
+            <span> Valor Médio </span>
+          </div>
+        </article>
+      </section>
+
+      <!-- ========================= -->
+      <!-- ÚLTIMOS PRODUTOS -->
+      <!-- ========================= -->
+
+      <section class="ultimos-produtos">
+        <div class="titulo">
+          <h2>Últimos Produtos</h2>
+
+          <button id="novo-produto">Novo Produto</button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Imagem</th>
+
+              <th>Nome</th>
+
+              <th>Categoria</th>
+
+              <th>Marca</th>
+
+              <th>Preço</th>
+            </tr>
+          </thead>
+
+          <tbody id="tabela-produtos">
+            <!-- JS -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

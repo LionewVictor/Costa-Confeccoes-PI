@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produto | Costa Confecções</title>
+    <link rel="stylesheet" href="CSS/produto-page.css" />
+    <link rel="stylesheet" href="../Global/CSS/global.css" />
+    <link rel="stylesheet" href="../Global/CSS/header.css" />
+    <link rel="stylesheet" href="../Global/CSS/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <!-- ================================================== -->
+      <!-- LOGO -->
+      <!-- ================================================== -->
+
+      <div class="logo-1">
+        <div class="logo-costa" id="logo">
+          <img
+            src="../Global/CSS/Logo - Costa Confeccoes.jpeg"
+            alt="Logo Costa Confecções"
+          />
+        </div>
+      </div>
+
+      <!-- ================================================== -->
+      <!-- PESQUISA -->
+      <!-- ================================================== -->
+
+      <div class="header-centro">
+        <input
+          id="campo-pesquisa"
+          type="text"
+          placeholder="Pesquisar produtos..."
+        />
+
+        <button id="botao-pesquisa" type="button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <!-- ================================================== -->
+      <!-- AÇÕES DO HEADER -->
+      <!-- ================================================== -->
+
+      <div class="header-direita">
+        <!-- ================================================= -->
+        <!-- FAVORITOS -->
+        <!-- ================================================= -->
+
+        <button class="caixa-menor" id="botao-favoritos" type="button">
+          <i class="fa-solid fa-heart"></i>
+
+          <span> Lista de Desejos </span>
+        </button>
+
+        <!-- ================================================= -->
+        <!-- LOGIN -->
+        <!-- ================================================= -->
+
+        <button class="caixa-menor" id="botao-login" type="button">
+          <i class="fa-regular fa-circle-user"></i>
+
+          <span> Login </span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="produto">
+        <!-- ================================================= -->
+        <!-- LADO ESQUERDO -->
+        <!-- ================================================= -->
+
+        <div class="produto-esquerda">
+          <!-- ============================================= -->
+          <!-- IMAGEM PRINCIPAL -->
+          <!-- ============================================= -->
+
+          <div class="foto-principal">
+            <img id="imagem-produto" src="" alt="Imagem do produto" />
+          </div>
+
+          <!-- ============================================= -->
+          <!-- MINIATURAS -->
+          <!-- ============================================= -->
+          <!-- O JavaScript preencherá esse container com -->
+          <!-- as imagens adicionais do produto. -->
+          <!-- ============================================= -->
+
+          <div class="miniaturas" id="miniaturas-produto">
+            <!-- JS -->
+          </div>
+
+          <!-- ============================================= -->
+          <!-- CARACTERÍSTICAS -->
+          <!-- ============================================= -->
+
+          <section class="caracteristicas">
+            <h2>Características</h2>
+
+            <!-- ========================================= -->
+            <!-- MARCA -->
+            <!-- ========================================= -->
+
+            <div class="caracteristica-item">
+              <div class="caracteristica-icone">
+                <i class="fa-solid fa-tag"></i>
+              </div>
+
+              <div>
+                <h3>Marca</h3>
+
+                <p id="marca-produto">-</p>
+              </div>
+            </div>
+
+            <!-- ========================================= -->
+            <!-- CATEGORIA -->
+            <!-- ========================================= -->
+
+            <div class="caracteristica-item">
+              <div class="caracteristica-icone">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+
+              <div>
+                <h3>Categoria</h3>
+
+                <p id="categoria-produto">-</p>
+              </div>
+            </div>
+
+            <!-- ========================================= -->
+            <!-- GÊNERO -->
+            <!-- ========================================= -->
+
+            <div class="caracteristica-item">
+              <div class="caracteristica-icone">
+                <i class="fa-solid fa-user"></i>
+              </div>
+
+              <div>
+                <h3>Gênero</h3>
+
+                <p id="genero-produto">-</p>
+              </div>
+            </div>
+
+            <!-- ========================================= -->
+            <!-- MATERIAL / COMPOSIÇÃO -->
+            <!-- ========================================= -->
+
+            <div class="caracteristica-item">
+              <div class="caracteristica-icone">
+                <i class="fa-solid fa-shirt"></i>
+              </div>
+
+              <div>
+                <h3>Composição</h3>
+
+                <p id="material-produto">-</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ================================================= -->
+        <!-- LADO DIREITO -->
+        <!-- ================================================= -->
+
+        <div class="produto-direita">
+          <!-- ============================================= -->
+          <!-- NOME -->
+          <!-- ============================================= -->
+
+          <h1 id="nome-produto">Carregando produto...</h1>
+
+          <!-- ============================================= -->
+          <!-- AVALIAÇÃO RESUMIDA -->
+          <!-- ============================================= -->
+          <!-- O campo fica reservado para a informação -->
+          <!-- resumida da avaliação. -->
+          <!-- ============================================= -->
+
+          <p id="avaliacao-produto">
+            <i class="fa-solid fa-star"></i>
+
+            Avaliação do produto
+          </p>
+
+          <!-- ============================================= -->
+          <!-- DIVISOR -->
+          <!-- ============================================= -->
+
+          <div class="divisor1"></div>
+
+          <!-- ============================================= -->
+          <!-- PREÇO -->
+          <!-- ============================================= -->
+
+          <div class="preco-produto">
+            <h2 id="preco-produto">R$ 0,00</h2>
+          </div>
+
+          <!-- ============================================= -->
+          <!-- COR -->
+          <!-- ============================================= -->
+
+          <section class="selecao-cor">
+            <h3>Cor</h3>
+
+            <div class="cores" id="cores-produto">
+              <!-- JS criará as cores -->
+            </div>
+
+            <!-- Valor da cor selecionada -->
+
+            <p class="valor-cor">
+              Cor selecionada:
+
+              <span id="cor-produto"> - </span>
+            </p>
+          </section>
+
+          <!-- ============================================= -->
+          <!-- TAMANHOS -->
+          <!-- ============================================= -->
+
+          <section class="selecao-tamanho">
+            <h3 class="txt-tamanhos">Tamanho</h3>
+
+            <div class="tamanhos" id="tamanhos-produto">
+              <!-- JS criará os tamanhos -->
+            </div>
+
+            <!-- Tamanho selecionado -->
+
+            <p class="valor-tamanho">
+              Tamanho selecionado:
+
+              <span id="tamanho-produto"> - </span>
+            </p>
+          </section>
+
+          <!-- ============================================= -->
+          <!-- ESTOQUE -->
+          <!-- ============================================= -->
+
+          <div class="estoque-container">
+            <strong> Quantidade em estoque: </strong>
+
+            <span id="estoque-produto"> Selecione uma cor e um tamanho. </span>
+          </div>
+
+          <!-- ============================================= -->
+          <!-- FAVORITOS -->
+          <!-- ============================================= -->
+
+          <button
+            type="button"
+            id="botao-adicionar-favorito"
+            class="botao-favorito"
+          >
+            <i class="fa-regular fa-heart"></i>
+
+            <span id="texto-favorito"> Adicionar aos Favoritos </span>
+          </button>
+
+          <!-- ============================================= -->
+          <!-- DESCRIÇÃO -->
+          <!-- ============================================= -->
+
+          <section class="descricao">
+            <h2>Descrição</h2>
+
+            <p id="descricao-produto">Carregando descrição...</p>
+          </section>
+
+          <!-- ============================================= -->
+          <!-- ANÚNCIO EM VÍDEO -->
+          <!-- ============================================= -->
+
+          <div class="video">
+            <i class="fa-solid fa-play"></i>
+
+            <h2>Anúncio em Vídeo</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================== -->
+      <!-- DIVISOR -->
+      <!-- ================================================== -->
+
+      <div class="divisor2"></div>
+
+      <!-- ================================================== -->
+      <!-- AVALIAÇÕES -->
+      <!-- ================================================== -->
+      <!--
+            Diferentemente da versão antiga, não colocamos
+            avaliações fictícias aqui.
+
+            O produto-page.js criará dinamicamente:
+
+            • Média
+            • Quantidade de avaliações
+            • Distribuição de estrelas
+            • Comentários
+            • Formulário de avaliação
+        -->
+      <!-- ================================================== -->
+
+      <section id="avaliacoes-produto" class="avaliacoes-produto">
+        <!-- JS -->
+      </section>
+    </main>
+
+    <!-- ====================================================== -->
+    <!-- FOOTER -->
+    <!-- ====================================================== -->
+
+    <footer class="footer">
+      <!-- ================================================== -->
+      <!-- CONTATO -->
+      <!-- ================================================== -->
+
+      <div class="footer-coluna logo-footer">
+        <p>Contato</p>
+
+        <div class="redes-sociais">
+          <div class="instagram" id="insta">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+
+          <div class="whatsapp" id="zap">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="divisor"></div>
+
+      <!-- ================================================== -->
+      <!-- SOBRE -->
+      <!-- ================================================== -->
+
+      <div class="footer-coluna">
+        <p>Sobre</p>
+
+        <div id="sobre" data-link="sobre.html">
+          <i class="fa-regular fa-circle-question footer-icon"></i>
+        </div>
+      </div>
+
+      <div class="divisor"></div>
+
+      <!-- ================================================== -->
+      <!-- SUPORTE -->
+      <!-- ================================================== -->
+
+      <div class="footer-coluna">
+        <p>Suporte</p>
+
+        <div id="suporte" data-link="central.html">
+          <i class="fa-solid fa-headset footer-icon"></i>
+        </div>
+      </div>
+
+      <div class="divisor"></div>
+
+      <!-- ================================================== -->
+      <!-- LINKS -->
+      <!-- ================================================== -->
+
+      <div class="footer-coluna2">
+        <p id="sustentabilidade" data-link="sustentabilidade.html">
+          Sustentabilidade
+        </p>
+
+        <p id="mapa-site" data-link="mapa-site.html">Mapa do Site</p>
+      </div>
+
+      <div class="divisor"></div>
+
+      <!-- ================================================== -->
+      <!-- POLÍTICAS -->
+      <!-- ================================================== -->
+
+      <div class="footer-coluna2">
+        <p id="politica-privacidade" data-link="politica-privacidade.html">
+          Política de Privacidade
+        </p>
+
+        <p id="termos-condicoes" data-link="termos-condicoes.html">
+          Termos e Condições
+        </p>
+      </div>
+
+      <div class="divisor"></div>
+
+      <!-- ================================================== -->
+      <!-- SITE BLINDADO -->
+      <!-- ================================================== -->
+
+      <div class="footer-coluna">
+        <img
+          src="https://cdn.prod.website-files.com/686fd3c4baa0f126615c68cc/68756d11ab44b920e1451861_logo-aplica%C3%A7%C3%A3o-site.svg"
+          alt="Site Blindado"
+        />
+      </div>
+    </footer>
+
+    <div class="direitos">© Class 238 - Todos os direitos reservados</div>
+
+    <script src="../Global/js/header.js"></script>
+    <script src="../Global/js/footer.js"></script>
+    <script src="js/produto-page.js"></script>
+  </body>
+</html>

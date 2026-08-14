@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+:root {
+  --preto: #1f1f1f;
+  --dourado: #d2ae73;
+  --dourado-hover: #c4a36d;
+  --branco: #ffffff;
+  --cinza: #f4f4f4;
+  --cinza-borda: #e2e2e2;
+  --texto: #555;
+}
+
+/* ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: var(--cinza);
+
+  display: flex;
+
+  min-height: 100vh;
+}
+
+/* ========================= */
+/* SIDEBAR */
+/* ========================= */
+
+.sidebar {
+  width: 260px;
+
+  height: 100vh;
+
+  background: var(--preto);
+
+  color: white;
+
+  position: fixed;
+}
+
+.logo {
+  height: 90px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo img {
+  width: 170px;
+}
+
+.sidebar nav {
+  margin-top: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 18px 30px;
+
+  display: flex;
+
+  gap: 15px;
+
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+
+  font-weight: 600;
+}
+
+.sidebar li:hover {
+  background: var(--dourado);
+
+  color: black;
+}
+
+.sidebar li.ativo {
+  background: var(--dourado);
+
+  color: black;
+}
+
+/* ========================= */
+/* CONTEÚDO */
+/* ========================= */
+
+.conteudo {
+  margin-left: 260px;
+
+  width: calc(100% - 260px);
+
+  padding: 40px;
+}
+
+/* ========================= */
+/* TOPO */
+/* ========================= */
+
+.topo {
+  margin-bottom: 35px;
+}
+
+.topo h1 {
+  font-size: 34px;
+
+  color: var(--preto);
+}
+
+.topo p {
+  margin-top: 8px;
+
+  color: var(--texto);
+}
+
+/* ========================= */
+/* FORMULÁRIO */
+/* ========================= */
+
+form {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 35px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+.campo {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.campo label {
+  margin-bottom: 8px;
+
+  font-weight: 600;
+
+  color: var(--preto);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 14px;
+
+  border: 1px solid var(--cinza-borda);
+
+  border-radius: 12px;
+
+  outline: none;
+
+  transition: 0.25s;
+
+  font-size: 15px;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: var(--dourado);
+}
+
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
+
+.botoes {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+.cancelar {
+  padding: 13px 24px;
+
+  border: none;
+
+  background: #cfcfcf;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  transition: 0.25s;
+}
+
+.cancelar:hover {
+  background: #bcbcbc;
+}
+
+.salvar {
+  padding: 13px 24px;
+
+  border: none;
+
+  background: var(--dourado);
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  transition: 0.25s;
+}
+
+.salvar:hover {
+  background: var(--dourado-hover);
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .sidebar {
+    width: 90px;
+  }
+
+  .sidebar li {
+    justify-content: center;
+
+    font-size: 0;
+  }
+
+  .sidebar li i {
+    font-size: 22px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .conteudo {
+    margin-left: 90px;
+
+    width: calc(100% - 90px);
+  }
+}
+
+@media (max-width: 650px) {
+  .conteudo {
+    padding: 20px;
+  }
+
+  form {
+    padding: 20px;
+  }
+}
