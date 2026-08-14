@@ -1,0 +1,414 @@
+/* ============================================================
+   FONTE
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+/* ============================================================
+   VARIÁVEIS
+   ============================================================ */
+
+:root {
+  --preto: #000000;
+
+  --preto-costa: #1f1f1f;
+
+  --branco: #ffffff;
+
+  --amarelo-costa: #d2ae73;
+
+  --amarelo-hover: #c4a36d;
+
+  --cinza-card: #e6e6e6;
+
+  --cinza-input: #cccccc;
+
+  --cinza-borda: #bdbdbd;
+
+  --cinza-texto: #555555;
+
+  --vermelho: #c62828;
+
+  --verde: #2e7d32;
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ============================================================
+   BODY
+   ============================================================ */
+
+body {
+  background: var(--amarelo-costa);
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.redefinir-container {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.redefinir-card {
+  width: 100%;
+
+  max-width: 420px;
+
+  background: var(--cinza-card);
+
+  padding: 35px 30px;
+
+  border-radius: 24px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* ============================================================
+   ÍCONE
+   ============================================================ */
+
+.icone-cadeado {
+  width: 65px;
+
+  height: 65px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: var(--preto);
+
+  color: var(--branco);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 25px;
+}
+
+/* ============================================================
+   TÍTULO
+   ============================================================ */
+
+.redefinir-card h1 {
+  text-align: center;
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  color: var(--preto);
+
+  margin-bottom: 10px;
+}
+
+/* ============================================================
+   SUBTÍTULO
+   ============================================================ */
+
+.subtitulo {
+  text-align: center;
+
+  color: var(--cinza-texto);
+
+  font-size: 14px;
+
+  line-height: 22px;
+
+  margin-bottom: 25px;
+}
+
+/* ============================================================
+   CAMPOS
+   ============================================================ */
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #444;
+}
+
+.campo input {
+  width: 100%;
+
+  padding: 14px 15px;
+
+  border: 1px solid var(--cinza-borda);
+
+  border-radius: 12px;
+
+  background: var(--cinza-input);
+
+  color: var(--preto);
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.25s;
+}
+
+.campo input:focus {
+  background: var(--branco);
+
+  border-color: var(--preto);
+
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+.campo input::placeholder {
+  color: #888;
+}
+
+/* ============================================================
+   CAMPO DE SENHA
+   ============================================================ */
+
+.campo-senha {
+  position: relative;
+}
+
+.campo-senha input {
+  padding-right: 48px;
+}
+
+.mostrar-senha {
+  position: absolute;
+
+  right: 12px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border: none;
+
+  background: transparent;
+
+  color: #666;
+
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+.mostrar-senha:hover {
+  color: var(--preto);
+}
+
+/* ============================================================
+   REGRAS DA SENHA
+   ============================================================ */
+
+.regras-senha {
+  margin-top: -5px;
+
+  margin-bottom: 18px;
+}
+
+.regras-senha p {
+  font-size: 12px;
+
+  color: var(--cinza-texto);
+
+  line-height: 18px;
+}
+
+/* ============================================================
+   BOTÃO PRINCIPAL
+   ============================================================ */
+
+.btn-principal {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: var(--preto);
+
+  color: var(--branco);
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 8px;
+
+  transition: 0.25s;
+}
+
+.btn-principal:hover {
+  background: var(--preto-costa);
+
+  transform: translateY(-1px);
+}
+
+.btn-principal:active {
+  transform: scale(0.98);
+}
+
+/* ============================================================
+   MENSAGENS
+   ============================================================ */
+
+.mensagem {
+  display: none;
+
+  text-align: center;
+
+  margin-top: 18px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+
+  line-height: 20px;
+}
+
+/* Mensagem de sucesso */
+
+.mensagem.sucesso {
+  display: block;
+
+  background: #dff2df;
+
+  color: var(--verde);
+}
+
+/* Mensagem de erro */
+
+.mensagem.erro {
+  display: block;
+
+  background: #f8dddd;
+
+  color: var(--vermelho);
+}
+
+/* ============================================================
+   LINK VOLTAR
+   ============================================================ */
+
+.voltar {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 22px;
+
+  color: var(--preto);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.voltar:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   ETAPA DA NOVA SENHA
+   ============================================================ */
+
+/*
+   O JavaScript decide qual etapa mostrar.
+   Por padrão, a etapa da nova senha fica escondida.
+*/
+
+#etapa-senha {
+  display: none;
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .redefinir-card {
+    padding: 30px 20px;
+
+    border-radius: 20px;
+  }
+
+  .redefinir-card h1 {
+    font-size: 26px;
+  }
+
+  .icone-cadeado {
+    width: 58px;
+
+    height: 58px;
+
+    font-size: 22px;
+  }
+}
