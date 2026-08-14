@@ -4,39 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Desejos - Costa Confecções</title>
-    <link rel="stylesheet" href="favoritos.css">
+    <link rel="stylesheet" href="CSS/favoritos.css">
+    <link rel="stylesheet" href="../Global/CSS/global.css">
+    <link rel="stylesheet" href="../Global/CSS/header.css">
+    <link rel="stylesheet" href="../Global/CSS/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
     <body> 
-  <header>
+<header class="header">
 
-        <div class="logo-1">
-            <div class="logo-costa">
-                <img src="WhatsApp Image 2026-06-19 at 14.49.27.jpeg" alt="Logo Costa Confecções">
-            </div>
+    <div class="logo-1">
+        <div class="logo-costa" id="logo">
+            <img src="../Global/CSS/Logo - Costa Confeccoes.jpeg" alt="Logo Costa Confecções">
         </div>
+    </div>
 
-        <div class="header-centro">
-            <input type="text">
-            <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </div>
+    <div class="header-centro">
+        <input id="campo-pesquisa" type="text" placeholder="Pesquisar produtos...">
+        <button id="botao-pesquisa">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
 
-        <div class="header-direita">
+    <div class="header-direita">
 
-            <button class="caixa-menor">
-                <i class="fa-solid fa-heart"></i>
-                <span>Lista de Desejos</span>
-            </button>
+        <button class="caixa-menor" id="botao-favoritos">
+            <i class="fa-solid fa-heart"></i>
+            <span>Lista de Desejos</span>
+        </button>
 
-            <button class="caixa-menor">
-                <i class="fa-regular fa-circle-user"></i>
-                <span>Login</span>
-            </button>
-        </div>
+        <button class="caixa-menor" id="botao-login">
+            <i class="fa-regular fa-circle-user"></i>
+            <span>Login</span>
+        </button>
 
-    </header>
+    </div>
+</header>
 
         <main class="main-container">
                                                                                                                                                                                                                                 
@@ -65,60 +68,76 @@
             </section>
 
             <section class="products-list" id="favoritos">
+
+            </section>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
         </main>
-<footer>
 
-    <div class="footer-coluna logo-footer">     
-    <p>Contato</p>
-
-        <div class="redes-sociais">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-whatsapp"></i>
+        <footer class="footer">
+            <div class="footer-coluna logo-footer">
+                <p>Contato</p>
+        
+                <div class="redes-sociais">
+                    <div class="instagram" id="insta">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="whatsapp" id="zap">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="divisor"></div>
+            <div class="footer-coluna">
+                <p>Sobre</p>
+                <div id="sobre" data-link="sobre.html">
+                    <i class="fa-regular fa-circle-question footer-icon"></i>
+                </div>
+            </div>
+        
+            <div class="divisor"></div>
+            <div class="footer-coluna">
+                <p>Suporte</p>
+                <div id="suporte" data-link="central.html">
+                    <i class="fa-solid fa-headset footer-icon"></i>
+                </div>
+            </div>
+        
+            <div class="divisor"></div>
+            <div class="footer-coluna2">
+                <p id="sustentabilidade" data-link="sustentabilidade.html">
+                    Sustentabilidade
+                </p>
+        
+                <p id="mapa-site" data-link="mapa-site.html">
+                    Mapa do Site
+                </p>
+            </div>
+        
+            <div class="divisor"></div>
+            <div class="footer-coluna2">
+                <p id="politica-privacidade" data-link="politica-privacidade.html">
+                    Política de Privacidade
+                </p>
+        
+                <p id="termos-condicoes" data-link="termos-condicoes.html">
+                    Termos e Condições
+                </p>
+            </div>
+        
+            <div class="divisor"></div>
+            <div class="footer-coluna">
+                <img src="https://cdn.prod.website-files.com/686fd3c4baa0f126615c68cc/68756d11ab44b920e1451861_logo-aplica%C3%A7%C3%A3o-site.svg"
+                    alt="Site Blindado">
+            </div>
+        </footer>
+        
+        <div class="direitos">
+            © Class 238 - Todos os direitos reservados
         </div>
-
-    </div>
-
-    <div class="divisor"></div>
-
-    <div class="footer-coluna">
-        <p>Sobre</p>
-        <i class="fa-regular fa-circle-question footer-icon"></i>
-    </div>
-
-    <div class="divisor"></div>
-
-    <div class="footer-coluna">
-        <p>Suporte</p>
-        <i class="fa-solid fa-headset footer-icon"></i>
-    </div>
-
-    <div class="divisor"></div>
-
-    <div class="footer-coluna2">
-        <p>Sustentabilidade</p>
-        <p>Mapa do site</p>
-        <p>Clique e retire</p>
-    </div>
-
-    <div class="divisor"></div>
-
-    <div class="footer-coluna2">
-        <p>Política de privacidade</p>
-        <p>Termos e condições</p>
-    </div>
-
-    <div class="divisor"></div>
-
-    <div class="footer-coluna">
-        <img src="https://cdn.prod.website-files.com/686fd3c4baa0f126615c68cc/68756d11ab44b920e1451861_logo-aplica%C3%A7%C3%A3o-site.svg" alt="Site Blindado">
-    </div>
-
-</footer>
-
-      <div class="direitos">
-        © Class 238 - Todos os direitos
-    </div>
-    <script src="favoritos.js"></script>
+    
+    <script src="../Global/js/header.js"></script>
+    <script src="../Global/js/footer.js"></script>
+    <script src="js/favoritos.js"></script>
      </body>
 </html>
