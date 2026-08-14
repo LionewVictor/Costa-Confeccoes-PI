@@ -1,0 +1,357 @@
+/* ============================================================
+   FONTE
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+/* ============================================================
+   VARIÁVEIS
+   ============================================================ */
+
+:root {
+  --preto: #000000;
+  --branco: #ffffff;
+
+  --amarelo-costa: #d2ae73;
+
+  --cinza-card: #e6e6e6;
+  --cinza-botao: #e0e0e0;
+  --cinza-hover: #d6d6d6;
+  --cinza-borda: #bdbdbd;
+  --cinza-texto: #555555;
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ============================================================
+   BODY
+   ============================================================ */
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: var(--amarelo-costa);
+}
+
+/* ============================================================
+   CARD DE LOGIN
+   ============================================================ */
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+
+  padding: 35px 25px;
+
+  background: var(--cinza-card);
+
+  border-radius: 24px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+/* ============================================================
+   TÍTULO
+   ============================================================ */
+
+.login-card h1 {
+  text-align: center;
+
+  font-size: 32px;
+  font-weight: 500;
+
+  color: var(--preto);
+
+  margin-bottom: 10px;
+}
+
+/* ============================================================
+   SUBTÍTULO
+   ============================================================ */
+
+.subtitle {
+  text-align: center;
+
+  font-size: 14px;
+
+  color: var(--cinza-texto);
+
+  margin-bottom: 25px;
+}
+
+/* ============================================================
+   LOGIN SOCIAL
+   ============================================================ */
+
+.social-login-container {
+  display: flex;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+.social-btn {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 15px;
+
+  background: var(--cinza-botao);
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition: 0.25s;
+}
+
+/* ============================================================
+   HOVER DOS BOTÕES SOCIAIS
+   ============================================================ */
+
+.social-btn:hover {
+  background: var(--cinza-hover);
+
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   ÍCONE GOOGLE
+   ============================================================ */
+
+.fa-google {
+  color: #4285f4;
+}
+
+/* ============================================================
+   ÍCONE FACEBOOK
+   ============================================================ */
+
+.fa-facebook-f {
+  color: #1877f2;
+}
+
+/* ============================================================
+   DIVISOR
+   ============================================================ */
+
+.divider-container {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 20px 0;
+}
+
+.divider-container span {
+  color: #555555;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+.divider-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: var(--cinza-borda);
+}
+
+/* ============================================================
+   GRUPO DO FORMULÁRIO
+   ============================================================ */
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+/* ============================================================
+   LABEL
+   ============================================================ */
+
+.form-group label {
+  display: block;
+
+  font-size: 13px;
+
+  margin-bottom: 6px;
+
+  color: #444444;
+
+  font-weight: 500;
+}
+
+/* ============================================================
+   INPUT
+   ============================================================ */
+
+.input-field {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border: 1px solid var(--cinza-borda);
+
+  border-radius: 12px;
+
+  background: #cccccc;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.25s;
+}
+
+/* ============================================================
+   INPUT EM FOCO
+   ============================================================ */
+
+.input-field:focus {
+  background: var(--branco);
+
+  border-color: var(--preto);
+
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================================
+   PLACEHOLDER
+   ============================================================ */
+
+.input-field::placeholder {
+  color: #888888;
+}
+
+/* ============================================================
+   BOTÃO ENTRAR
+   ============================================================ */
+
+.btn-submit {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 10px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: var(--preto);
+
+  color: var(--branco);
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+/* ============================================================
+   HOVER DO BOTÃO
+   ============================================================ */
+
+.btn-submit:hover {
+  background: #222222;
+
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   EFEITO AO CLICAR
+   ============================================================ */
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+/* ============================================================
+   LINK PARA CADASTRO
+   ============================================================ */
+
+.cadastro {
+  display: block;
+
+  margin-top: 20px;
+
+  text-align: center;
+
+  font-size: 13px;
+
+  color: #444444;
+}
+
+.cadastro a {
+  color: var(--preto);
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.cadastro a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .login-card {
+    padding: 28px 20px;
+
+    border-radius: 20px;
+  }
+
+  .login-card h1 {
+    font-size: 28px;
+  }
+
+  .social-login-container {
+    flex-direction: column;
+  }
+
+  .social-btn {
+    width: 100%;
+  }
+}

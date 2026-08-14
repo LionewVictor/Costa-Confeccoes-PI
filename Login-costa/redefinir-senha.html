@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redefinir Senha | Costa Confecções</title>
+    <link rel="stylesheet" href="CSS/redefinir-senha.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ========================================================= -->
+    <!-- CONTAINER PRINCIPAL -->
+    <!-- ========================================================= -->
+
+    <main class="redefinir-container">
+      <!-- ===================================================== -->
+      <!-- CARD -->
+      <!-- ===================================================== -->
+
+      <section class="redefinir-card">
+        <!-- Ícone -->
+        <div class="icone-cadeado">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+
+        <!-- ================================================= -->
+        <!-- TELA DE SOLICITAÇÃO -->
+        <!-- Aparece quando não existe token na URL -->
+        <!-- ================================================= -->
+
+        <div id="etapa-email">
+          <h1>Esqueceu sua senha?</h1>
+
+          <p class="subtitulo">
+            Informe o e-mail cadastrado e enviaremos um link para você redefinir
+            sua senha.
+          </p>
+
+          <form id="form-email">
+            <!-- Campo de e-mail -->
+            <div class="campo">
+              <label for="email"> E-mail </label>
+
+              <input
+                type="email"
+                id="email"
+                placeholder="Digite seu e-mail"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <!-- Botão -->
+            <button type="submit" class="btn-principal">
+              <i class="fa-solid fa-paper-plane"></i>
+
+              Enviar link
+            </button>
+          </form>
+
+          <!-- Área onde o JavaScript mostrará mensagens -->
+          <p id="mensagem-email" class="mensagem"></p>
+
+          <!-- Voltar para login -->
+          <a href="login.html" class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Voltar para o login
+          </a>
+        </div>
+
+        <!-- ================================================= -->
+        <!-- TELA DE NOVA SENHA -->
+        <!-- Aparece quando existe ?token= na URL -->
+        <!-- ================================================= -->
+
+        <div id="etapa-senha">
+          <h1>Criar nova senha</h1>
+
+          <p class="subtitulo">Digite sua nova senha abaixo.</p>
+
+          <form id="form-senha">
+            <!-- Nova senha -->
+            <div class="campo">
+              <label for="novaSenha"> Nova senha </label>
+
+              <div class="campo-senha">
+                <input
+                  type="password"
+                  id="novaSenha"
+                  placeholder="Digite sua nova senha"
+                  minlength="8"
+                  autocomplete="new-password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="mostrar-senha"
+                  id="mostrar-nova-senha"
+                  aria-label="Mostrar senha"
+                >
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Confirmar senha -->
+            <div class="campo">
+              <label for="confirmarSenha"> Confirmar nova senha </label>
+
+              <div class="campo-senha">
+                <input
+                  type="password"
+                  id="confirmarSenha"
+                  placeholder="Digite novamente sua senha"
+                  minlength="8"
+                  autocomplete="new-password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="mostrar-senha"
+                  id="mostrar-confirmar-senha"
+                  aria-label="Mostrar senha"
+                >
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Regras da senha -->
+            <div class="regras-senha">
+              <p>
+                A senha deve possuir pelo menos
+                <strong>8 caracteres</strong>.
+              </p>
+            </div>
+
+            <!-- Botão -->
+            <button type="submit" class="btn-principal">
+              <i class="fa-solid fa-key"></i>
+
+              Redefinir senha
+            </button>
+          </form>
+
+          <!-- Área de mensagens -->
+          <p id="mensagem-senha" class="mensagem"></p>
+
+          <!-- Voltar para login -->
+          <a href="login.html" class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Voltar para o login
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="js/redefinir-senha.js"></script>
+  </body>
+</html>
