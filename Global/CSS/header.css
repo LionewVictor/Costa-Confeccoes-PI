@@ -1,0 +1,99 @@
+
+
+header {
+    height: 65px;
+    border-bottom: 2px solid var(--preto-cabecalho);
+    display: flex;
+    align-items: center;
+    background: #c4a36d86;
+    flex-direction: column 1px;
+    justify-content: space-between;
+    backdrop-filter: blur(20px);
+    position: sticky;
+    top: 00;
+    z-index: 10;
+}
+
+.logo-1 {
+    width: 200px;
+    height: 100%;
+    background: var(--preto-cabecalho);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+    flex-shrink: 0;
+}
+
+.logo-costa img {
+    width: 130px;
+    height: 65px;
+}
+
+.header-centro {
+    width: 1500px;
+    height: 38px;
+    margin-left: 410px;
+    margin-right: 400px;
+    background: var(--branco-gelo);
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-centro input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.header-centro button {
+    width: 60px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.header-centro button:hover {
+    color: #000000;
+    transform: scale(1.05);
+}
+
+.header-direita {
+    display: flex;
+    gap: 18px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.caixa-menor {
+    background: var(--cinza);
+    border: none;
+    border-radius: 15px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.caixa-menor:hover {
+    background: var(--cinza);
+    transform: scale(1.05);
+}
+
+.caixa-menor span {
+    font-weight: 800px;
+    font-size: 15px;
+}
+
+.caixa-menor i {
+    font-size: 20px;
+}

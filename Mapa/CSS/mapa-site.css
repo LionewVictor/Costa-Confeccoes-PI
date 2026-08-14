@@ -1,0 +1,195 @@
+/* ============================================================
+   COSTA CONFECÇÕES
+   MAPA DO SITE
+   ============================================================ */
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.mapa-container {
+  width: min(1050px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 45px 0 70px;
+
+  min-height: 70vh;
+}
+
+/* ============================================================
+   TOPO
+   ============================================================ */
+
+.mapa-topo {
+  margin-bottom: 35px;
+}
+
+.mapa-topo h1 {
+  margin-bottom: 10px;
+
+  color: var(--preto-cabecalho);
+
+  font-size: 34px;
+}
+
+.mapa-topo p {
+  color: #555;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+/* ============================================================
+   SEÇÕES
+   ============================================================ */
+
+.mapa-secao {
+  margin-bottom: 25px;
+
+  padding: 25px;
+
+  background: rgba(255, 254, 254, 0.45);
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+
+  border-radius: 18px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================================
+   TÍTULO DAS SEÇÕES
+   ============================================================ */
+
+.mapa-secao h2 {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--preto-cabecalho);
+
+  font-size: 21px;
+}
+
+.mapa-secao h2 i {
+  font-size: 18px;
+}
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+
+.mapa-links {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+/* ============================================================
+   LINK INDIVIDUAL
+   ============================================================ */
+
+.mapa-links a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px 18px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+
+  border-radius: 13px;
+
+  color: var(--preto-cabecalho);
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* ============================================================
+   ÍCONE
+   ============================================================ */
+
+.mapa-links a i {
+  width: 25px;
+
+  text-align: center;
+
+  font-size: 16px;
+}
+
+/* ============================================================
+   HOVER
+   ============================================================ */
+
+.mapa-links a:hover {
+  background: var(--branco);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 700px) {
+  .mapa-container {
+    width: calc(100% - 25px);
+
+    padding-top: 30px;
+  }
+
+  .mapa-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   CELULAR
+   ============================================================ */
+
+@media (max-width: 450px) {
+  .mapa-container {
+    width: calc(100% - 18px);
+  }
+
+  .mapa-topo h1 {
+    font-size: 28px;
+  }
+
+  .mapa-secao {
+    padding: 18px;
+  }
+
+  .mapa-secao h2 {
+    font-size: 18px;
+  }
+
+  .mapa-links a {
+    padding: 13px;
+
+    font-size: 13px;
+  }
+}

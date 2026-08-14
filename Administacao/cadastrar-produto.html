@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar Produto | Costa Confecções</title>
+    <link rel="stylesheet" href="CSS/cadastrar-produto.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ======================================================== -->
+    <!-- MENU LATERAL -->
+    <!-- ======================================================== -->
+
+    <aside class="sidebar">
+      <!-- Logo -->
+      <div class="logo">
+        <img
+          src="../Global/CSS/Logo - Costa Confeccoes.jpeg"
+          alt="Costa Confecções"
+        />
+      </div>
+
+      <!-- Navegação administrativa -->
+      <nav>
+        <ul>
+          <!-- ================================================== -->
+          <!-- DASHBOARD -->
+          <!-- ================================================== -->
+
+          <li id="menu-dashboard">
+            <i class="fa-solid fa-chart-line"></i>
+
+            Dashboard
+          </li>
+
+          <!-- ================================================== -->
+          <!-- PRODUTOS -->
+          <!-- ================================================== -->
+
+          <li id="menu-produtos">
+            <i class="fa-solid fa-box"></i>
+
+            Produtos
+          </li>
+
+          <!-- ================================================== -->
+          <!-- CADASTRAR PRODUTO -->
+          <!-- ================================================== -->
+
+          <li class="ativo" id="menu-cadastrar">
+            <i class="fa-solid fa-square-plus"></i>
+
+            Cadastrar Produto
+          </li>
+
+          <!-- ================================================== -->
+          <!-- VER SITE -->
+          <!-- ================================================== -->
+
+          <li id="menu-ver-site">
+            <i class="fa-solid fa-globe"></i>
+
+            Ver Site
+          </li>
+
+          <!-- ================================================== -->
+          <!-- SAIR -->
+          <!-- ================================================== -->
+
+          <li id="menu-sair">
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Sair
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ======================================================== -->
+    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- ======================================================== -->
+
+    <main class="conteudo">
+      <!-- ==================================================== -->
+      <!-- CABEÇALHO -->
+      <!-- ==================================================== -->
+
+      <header class="topo">
+        <h1>Cadastrar Produto</h1>
+
+        <p>Preencha todas as informações do produto.</p>
+      </header>
+
+      <!-- ==================================================== -->
+      <!-- FORMULÁRIO -->
+      <!-- ==================================================== -->
+
+      <form id="form-produto">
+        <!-- ================================================= -->
+        <!-- GRID DOS CAMPOS -->
+        <!-- ================================================= -->
+
+        <div class="grid">
+          <!-- ============================================= -->
+          <!-- NOME -->
+          <!-- ============================================= -->
+
+          <div class="campo">
+            <label for="nome"> Nome </label>
+
+            <input type="text" id="nome" required />
+          </div>
+
+          <!-- ============================================= -->
+          <!-- MARCA -->
+          <!-- ============================================= -->
+
+          <div class="campo">
+            <label for="marca"> Marca </label>
+
+            <input type="text" id="marca" required />
+          </div>
+
+          <!-- ============================================= -->
+          <!-- CATEGORIA -->
+          <!-- ============================================= -->
+
+          <div class="campo">
+            <label for="categoria"> Categoria </label>
+
+            <select id="categoria">
+              <option value="Camisetas">Camisetas</option>
+
+              <option value="Calças">Calças</option>
+
+              <option value="Bermudas">Bermudas</option>
+
+              <option value="Bonés">Bonés</option>
+
+              <option value="Acessórios">Acessórios</option>
+            </select>
+          </div>
+
+          <!-- ============================================= -->
+          <!-- GÊNERO -->
+          <!-- ============================================= -->
+
+          <div class="campo">
+            <label for="genero"> Gênero </label>
+
+            <select id="genero">
+              <option value="Masculino">Masculino</option>
+
+              <option value="Feminino">Feminino</option>
+
+              <option value="Infantil">Infantil</option>
+
+              <option value="Unissex">Unissex</option>
+            </select>
+          </div>
+
+          <!-- ============================================= -->
+          <!-- PREÇO -->
+          <!-- ============================================= -->
+
+          <div class="campo">
+            <label for="preco"> Preço </label>
+
+            <input type="number" id="preco" step="0.01" min="0" required />
+          </div>
+
+          <!-- ============================================= -->
+          <!-- TAMANHO -->
+          <!-- ============================================= -->
+
+          <div class="campo">
+            <label for="tamanho"> Tamanho </label>
+
+            <select id="tamanho">
+              <option value="PP">PP</option>
+
+              <option value="P">P</option>
+
+              <option value="M">M</option>
+
+              <option value="G">G</option>
+
+              <option value="GG">GG</option>
+
+              <option value="Único">Único</option>
+            </select>
+          </div>
+
+          <!-- ============================================= -->
+          <!-- COR -->
+          <!-- ============================================= -->
+
+          <div class="campo">
+            <label for="cor"> Cor </label>
+
+            <input type="text" id="cor" placeholder="Ex.: Preto" />
+          </div>
+
+          <!-- ============================================= -->
+          <!-- MATERIAL -->
+          <!-- ============================================= -->
+
+          <div class="campo">
+            <label for="material"> Material </label>
+
+            <input type="text" id="material" placeholder="Ex.: Algodão" />
+          </div>
+
+          <!-- ============================================= -->
+          <!-- ESTOQUE -->
+          <!-- ============================================= -->
+
+          <div class="campo">
+            <label for="estoque"> Estoque </label>
+
+            <input
+              type="number"
+              id="estoque"
+              min="0"
+              step="1"
+              value="0"
+              placeholder="Quantidade disponível"
+            />
+          </div>
+
+          <!-- ============================================= -->
+          <!-- IMAGENS -->
+          <!-- ============================================= -->
+
+          <div class="campo">
+            <label for="imagem"> Imagens </label>
+
+            <input
+              type="file"
+              id="imagem"
+              accept="image/jpeg,image/jpg,image/png,image/webp"
+              multiple
+            />
+
+            <small> Selecione no máximo 4 imagens. </small>
+          </div>
+        </div>
+
+        <!-- ================================================= -->
+        <!-- DESCRIÇÃO -->
+        <!-- ================================================= -->
+
+        <div class="campo">
+          <label for="descricao"> Descrição </label>
+
+          <textarea
+            id="descricao"
+            rows="6"
+            placeholder="Descreva o produto..."
+          ></textarea>
+        </div>
+
+        <!-- ================================================= -->
+        <!-- BOTÕES -->
+        <!-- ================================================= -->
+
+        <div class="botoes">
+          <!-- Limpar formulário -->
+          <button type="reset" class="cancelar">Limpar</button>
+
+          <!-- Salvar produto -->
+          <button type="submit" class="salvar">
+            <i class="fa-solid fa-floppy-disk"></i>
+
+            Salvar Produto
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <!-- ======================================================== -->
+    <!-- JAVASCRIPT -->
+    <!-- ======================================================== -->
+
+    <!-- Funções compartilhadas da área administrativa -->
+    <script src="js/admin.js"></script>
+
+    <!-- JavaScript específico do cadastro -->
+    <script src="js/cadastrar-produto.js"></script>
+  </body>
+</html>
