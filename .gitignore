@@ -1,0 +1,20 @@
+.vercel/
+.DS_Store
+
+# Dependências instaladas localmente
+node_modules/
+Backend/node_modules/
+
+# Banco SQLite local e arquivos temporários do modo WAL
+Backend/banco/*.db
+Backend/banco/*.db-shm
+Backend/banco/*.db-wal
+
+# Arquivos de upload gerados em execução
+Backend/uploads/**
+!Backend/uploads/
+!Backend/uploads/produtos/
+!Backend/uploads/produtos/*.jpg
+!Backend/uploads/produtos/*.jpeg
+!Backend/uploads/produtos/*.png
+!Backend/uploads/produtos/*.webp
