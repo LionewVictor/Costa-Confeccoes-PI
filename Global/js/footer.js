@@ -70,7 +70,7 @@ const mapaSite = document.getElementById("mapa-site");
 
 if (mapaSite) {
   mapaSite.addEventListener("click", () => {
-    window.location.href = "mapa-site.html";
+    window.location.href = "/Mapa/mapa-site.html";
   });
 }
 
@@ -82,7 +82,7 @@ const cliqueRetire = document.getElementById("clique-retire");
 
 if (cliqueRetire) {
   cliqueRetire.addEventListener("click", () => {
-    window.location.href = "clique-retire.html";
+    window.location.href = "/Central de ajuda/central.html";
   });
 }
 
@@ -94,7 +94,7 @@ const politicaPrivacidade = document.getElementById("politica-privacidade");
 
 if (politicaPrivacidade) {
   politicaPrivacidade.addEventListener("click", () => {
-    window.location.href = "politica-privacidade.html";
+    window.location.href = "/Central de ajuda/sobre.html";
   });
 }
 
@@ -106,6 +106,6 @@ const termosCondicoes = document.getElementById("termos-condicoes");
 
 if (termosCondicoes) {
   termosCondicoes.addEventListener("click", () => {
-    window.location.href = "termos-condicoes.html";
+    window.location.href = "/Central de ajuda/sobre.html";
   });
 }
