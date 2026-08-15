@@ -44,7 +44,9 @@
 //
 // Caso futuramente o endereço do servidor seja alterado,
 // basta modificar esta variável.
-const API_URL = "http://127.0.0.1:3000";
+const API_URL = ["localhost", "127.0.0.1"].includes(window.location.hostname)
+  ? "http://127.0.0.1:3000"
+  : `${window.location.origin}/api`;
 
 // ============================================================
 // NAVEGAÇÃO ADMINISTRATIVA

@@ -79,7 +79,7 @@ let nodemailer = null;
 const app = express();
 
 // Porta utilizada pelo servidor.
-const PORT = 3000;
+const PORT = Number(process.env.PORT || 3000);
 
 // ============================================================
 // ARMAZENAMENTO DE IMAGENS DOS PRODUTOS
@@ -132,7 +132,10 @@ const uploadImagens = multer({
 });
 
 // URL pública usada para entregar as imagens ao frontend.
-const API_URL_PUBLICA = `http://127.0.0.1:${PORT}`;
+// Em produção, PUBLIC_API_URL pode apontar para a URL pública da API. Quando
+// a API é publicada no mesmo domínio pelo Vercel, usamos caminhos relativos.
+const API_URL_PUBLICA = process.env.PUBLIC_API_URL ||
+  (process.env.VERCEL ? "" : `http://127.0.0.1:${PORT}`);
 
 // Converte o nome/caminho de uma imagem em uma URL pública.
 function obterUrlImagem(nomeArquivo) {
@@ -165,10 +168,14 @@ function obterUrlImagem(nomeArquivo) {
 }
 
 // Endereço utilizado pelo frontend durante o desenvolvimento.
-const FRONTEND_URL = "http://127.0.0.1:5500";
+const FRONTEND_URL = process.env.FRONTEND_URL || "http://127.0.0.1:5500";
 
 // Origens permitidas durante o desenvolvimento.
-const FRONTEND_ORIGINS = ["http://127.0.0.1:5500", "http://localhost:5500"];
+const FRONTEND_ORIGINS = (process.env.FRONTEND_ORIGINS ||
+  ["http://127.0.0.1:5500", "http://localhost:5500", FRONTEND_URL].join(","))
+  .split(",")
+  .map((origem) => origem.trim())
+  .filter(Boolean);
 
 // ============================================================
 // CONFIGURAÇÃO DE E-MAIL
@@ -186,7 +193,7 @@ const FRONTEND_ORIGINS = ["http://127.0.0.1:5500", "http://localhost:5500"];
 // altere SOMENTE esta variável.
 // ------------------------------------------------------------
 
-const EMAIL_DO_DONO = "COLOQUE_O_EMAIL_DO_DONO_AQUI";
+const EMAIL_DO_DONO = process.env.EMAIL_DO_DONO || "";
 
 // ------------------------------------------------------------
 // CONTA DE E-MAIL REMETENTE
@@ -198,13 +205,13 @@ const EMAIL_DO_DONO = "COLOQUE_O_EMAIL_DO_DONO_AQUI";
 // uma App Password em vez da senha normal.
 // ------------------------------------------------------------
 
-const SMTP_USUARIO = "COLOQUE_O_EMAIL_REMETENTE_AQUI";
+const SMTP_USUARIO = process.env.SMTP_USUARIO || "";
 
-const SMTP_SENHA = "COLOQUE_A_SENHA_OU_APP_PASSWORD_AQUI";
+const SMTP_SENHA = process.env.SMTP_SENHA || "";
 
-const SMTP_HOST = "smtp.gmail.com";
+const SMTP_HOST = process.env.SMTP_HOST || "smtp.gmail.com";
 
-const SMTP_PORT = 587;
+const SMTP_PORT = Number(process.env.SMTP_PORT || 587);
 
 // ============================================================
 // NODEMAILER
@@ -340,7 +347,8 @@ app.use(
 
 app.use(
   session({
-    secret: "costa-confecoes-segredo",
+    secret:
+      process.env.SESSION_SECRET || crypto.randomBytes(32).toString("hex"),
 
     resave: false,
 
@@ -2920,12 +2928,18 @@ app.use((erro, req, res, next) => {
 // O Express começa a aceitar requisições na porta 3000.
 // ------------------------------------------------------------
 
-app.listen(PORT, () => {
-  console.log("============================================");
+// O Vercel importa a aplicação como uma função serverless. O servidor local
+// continua funcionando quando este arquivo é executado diretamente.
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log("============================================");
 
-  console.log("COSTA CONFECÇÕES - API");
+    console.log("COSTA CONFECÇÕES - API");
 
-  console.log(`Servidor rodando em http://127.0.0.1:${PORT}`);
+    console.log(`Servidor rodando em http://127.0.0.1:${PORT}`);
 
-  console.log("============================================");
-});
+    console.log("============================================");
+  });
+}
+
+module.exports = app;

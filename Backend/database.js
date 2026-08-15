@@ -51,10 +51,14 @@ const path = require("path");
 const pastaProjeto = __dirname;
 
 // Define o caminho da pasta onde o banco será armazenado.
-const pastaBanco = path.join(pastaProjeto, "banco");
+const caminhoBanco = process.env.SQLITE_PATH
+  ? path.resolve(process.env.SQLITE_PATH)
+  : path.join(pastaProjeto, "banco", "costa.db");
 
-// Define o caminho completo do arquivo SQLite.
-const caminhoBanco = path.join(pastaBanco, "costa.db");
+// Define a pasta do arquivo SQLite. Em ambientes locais usamos a pasta
+// "banco" do projeto; em ambientes serverless, use SQLITE_PATH (por exemplo,
+// /tmp/costa.db), pois o sistema de arquivos publicado é somente leitura.
+const pastaBanco = path.dirname(caminhoBanco);
 
 // ============================================================
 // CRIAÇÃO DA PASTA DO BANCO

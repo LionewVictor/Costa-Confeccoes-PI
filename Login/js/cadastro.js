@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // IMPORTANTE:
   // Enquanto o projeto estiver sendo executado localmente,
   // a API deve estar funcionando nessa porta.
-  const API_URL = "http://localhost:3000";
+  const API_URL = ["localhost", "127.0.0.1"].includes(window.location.hostname)
+    ? "http://127.0.0.1:3000"
+    : `${window.location.origin}/api`;
 
   // ========================================================
   // CADASTRO
