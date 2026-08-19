@@ -171,8 +171,15 @@ function obterUrlImagem(nomeArquivo) {
 const FRONTEND_URL = process.env.FRONTEND_URL || "http://127.0.0.1:5500";
 
 // Origens permitidas durante o desenvolvimento.
-const FRONTEND_ORIGINS = (process.env.FRONTEND_ORIGINS ||
-  ["http://127.0.0.1:5500", "http://localhost:5500", FRONTEND_URL].join(","))
+const FRONTEND_ORIGINS = (
+  process.env.FRONTEND_ORIGINS ||
+  [
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
+    FRONTEND_URL,
+    "https://costa-confeccoes.vercel.app",
+  ].join(",")
+)
   .split(",")
   .map((origem) => origem.trim())
   .filter(Boolean);
